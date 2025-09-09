@@ -1,3 +1,0 @@
-| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
-| :-: | :- | :-: | :- | :- | :- |
-| 4 | `from qiskit.qasm import Qasm` | * | Deprecation -> qiskit.qasm module deprecated | qiskit.qasm | Remove this import |

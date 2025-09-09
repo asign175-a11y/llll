@@ -1,1 +1,0 @@
-The code snippet does not require any refactoring for Qiskit 0.46.0.
