@@ -1,0 +1,5 @@
+Find migration rules to update the following Qiskit code to version 0.46.0.
+
+```python
+{"data":"from qiskit import execute\nfrom qiskit.test.mock import FakeVigo\nfrom qiskit.test.reference_circuits import ReferenceCircuits\nfrom qiskit.test.base import BaseTestCase\nimport unittest\n\nqc = ReferenceCircuits.bell()\nbackend = FakeVigo()\njob = execute(qc, backend, shots=1024)\nresult = job.result()\ncounts = result.get_counts()\n\nprint(\"Resultados del circuito Bell:\")\nprint(counts)\n\n# Prueba unitaria usando BaseTestCase\nclass TestBellCircuit(BaseTestCase):\n    \n    def test_bell_state(self):\n        qc = ReferenceCircuits.bell()\n        backend = FakeVigo()\n        job = execute(qc, backend, shots=1024)\n        result = job.result()\n        counts = result.get_counts()        \n        self.assertTrue('00' in counts or '11' in counts)\n        self.assertAlmostEqual(counts.get('00', 0) + counts.get('11', 0), 1024, delta=50)\n\n\nif __name__ == '__main__':\n    unittest.main()"}
+```
