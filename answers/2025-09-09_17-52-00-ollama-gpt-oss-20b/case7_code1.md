@@ -1,0 +1,5 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :-: | :- | :-: | :- | :- | :- |
+| 2 | `from qiskit.test.mock import FakeVigo` | \* | Deprecation -> `qiskit.test.mock` module deprecated (optional) | `qiskit.test.mock` | `from qiskit.providers.fake_provider import FakeVigo` |
+| 3 | `from qiskit.test.reference_circuits import ReferenceCircuits` | \* | Deprecation -> `qiskit.test.reference_circuits` module deprecated (optional) | `qiskit.test.reference_circuits` | `from qiskit.circuit.library import bell`  *(use `bell()` in place of `ReferenceCircuits.bell()`) | 
+| 4 | `from qiskit.test.base import BaseTestCase` | \* | Deprecation -> `qiskit.test.base` module deprecated (optional) | `qiskit.test.base` | `from qiskit.test.base import BaseTestCase` *(no change; keep if still present)* |
