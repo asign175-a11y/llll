@@ -1,0 +1,4 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit.tools.visualization import plot_histogram                   # type: ignore` | * | Deprecation -> plot_histogram function deprecated | `qiskit.tools.visualization.plot_histogram` | `from qiskit.visualization import plot_histogram  # type: ignore` |
+| 4 | `from qiskit.tools.monitor import job_monitor                        # type: ignore` | * | Deprecation -> job_monitor function deprecated | `qiskit.tools.monitor.job_monitor` | `from qiskit.providers.job_monitor import job_monitor  # type: ignore` |
