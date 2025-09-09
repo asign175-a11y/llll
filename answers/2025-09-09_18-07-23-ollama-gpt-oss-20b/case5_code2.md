@@ -1,0 +1,6 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | `from qiskit import QuantumCircuit, Aer, execute` | * | Deprecation -> Aer import deprecated (optional) | Aer | Replace with `from qiskit.providers.basic_provider import BasicProvider`; instantiate provider before use: `provider = BasicProvider()` |
+| 2 | `from qiskit.quantum_info import Pauli, state_fidelity` | * | Deprecation -> state_fidelity import deprecated (optional) | state_fidelity | Split into two imports: `from qiskit.quantum_info import Pauli` and `from qiskit.quantum_info.states.utils import state_fidelity` |
+| 17 | `qc.unitary(Operator(evolution_matrix), [0])` | * | Deprecation -> unitary method deprecated (optional) | QuantumCircuit.unitary | Replace with `qc.append(Operator(evolution_matrix), [0])` |
+| 19 | `simulator = Aer.get_backend('statevector_simulator')` | * | Deprecation -> Aer backend retrieval deprecated (optional) | Aer.get_backend | Use the provider: `provider = BasicProvider(); simulator = provider.get_backend('statevector_simulator')` |
