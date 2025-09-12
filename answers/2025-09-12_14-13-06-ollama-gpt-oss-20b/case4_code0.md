@@ -1,0 +1,3 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | from qiskit.tools.visualization import plot_histogram                   # type: ignore | * | Deprecation -> qiskit.tools.visualization.plot_histogram deprecated (optional) | qiskit.tools.visualization.plot_histogram | from qiskit.visualization import plot_histogram |
