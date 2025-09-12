@@ -1,0 +1,3 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | {"data":"from qiskit.quantum_info import SparsePauliOp\nfrom qiskit.primitives import Estimator\nfrom qiskit.circuit.library import RealAmplitudes\n\npsi1 = RealAmplitudes(num_qubits=2, reps=2)\nH1 = SparsePauliOp.from_list([(\"II\", 1), (\"IZ\", 2), (\"XI\", 3)])\ntheta1 = [0, 1, 1, 2, 3, 5]\n\nestimator = Estimator()\njob = estimator.run([psi1], [H1], [theta1])\njob_result = job.result()\nprint(f\"The primitive-job finished with result {job_result}\")"} | * | Syntax -> JSON wrapper removal | JSON wrapper | Replace the JSON string with the actual Python code lines.
