@@ -1,0 +1,4 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | from qiskit.quantum_info import SparsePauliOp | * | Deprecation -> Import of `SparsePauliOp` from `qiskit.quantum_info` is deprecated; use `qiskit.quantum_info.pauli` instead. | qiskit.quantum_info.pauli | from qiskit.quantum_info.pauli import SparsePauliOp |
+| 10 | job = estimator.run([psi1], [H1], [theta1]) | * | Deprecation -> `Estimator.run` positional arguments changed; now `parameter_values` must be passed as a keyword argument. | qiskit.primitives.Estimator | job = estimator.run([psi1], [H1], parameter_values=theta1)
