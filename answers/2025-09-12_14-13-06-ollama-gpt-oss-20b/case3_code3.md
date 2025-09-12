@@ -1,0 +1,3 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | from qiskit import qasm2 as qasm | * | Deprecation → `qasm2` module deprecated (optional) | qiskit.qasm2 | Replace the import with `from qiskit import qasm2` (or use the newer `qiskit.qasm` functions such as `qiskit.qasm.to_qasm` and `qiskit.qasm.from_qasm_str` for dumping and loading circuits). |
