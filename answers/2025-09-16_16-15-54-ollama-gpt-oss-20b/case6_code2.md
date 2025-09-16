@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | from qiskit.providers.fake_provider import * | 4ebcee31-18ee-4469-a170-82f4fb0db0ee | DEPRECATION - qiskit.providers.fake_provider module is deprecated as of Qiskit 0.46. | qiskit.providers.fake_provider | from qiskit_ibm_runtime.fake_provider import FakeOpenPulse2Q |
+| 4 | backend = FakeOpenPulse2Q() | 4ebcee31-18ee-4469-a170-82f4fb0db0ee | DEPRECATION - qiskit.providers.fake_provider module is deprecated as of Qiskit 0.46. | qiskit.providers.fake_provider | backend = FakeOpenPulse2Q()
