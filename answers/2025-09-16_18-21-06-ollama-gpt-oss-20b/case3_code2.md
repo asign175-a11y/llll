@@ -1,0 +1,6 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | `from qiskit import QuantumCircuit, Aer, execute` | b185 | The qiskit.providers.basicaer module and all its classes are deprecated from Qiskit 0.46 onward. | `Aer` import | `from qiskit import QuantumCircuit, execute`<br>`from qiskit.providers.basic_provider import BasicProvider` |
+| 9 | `qasm_str = qc.qasm()` | 03c2 | `QuantumCircuit.qasm()` method is deprecated; use `qasm2.dumps()` instead. | `QuantumCircuit.qasm()` | `qasm_str = qasm2.dumps(qc)` |
+| 15 | `simulator = Aer.get_backend('qasm_simulator')` | b185 | `Aer.get_backend()` from qiskit.providers.basicaer is deprecated; use `BasicProvider` instead. | `Aer.get_backend()` | `provider = BasicProvider()`<br>`simulator = provider.get_backend('basic_simulator')` |
+| 16 | `job = execute(qasm_qc, simulator, shots=1024)` | b185 | Using `Aer` backend is deprecated; run the circuit directly with the new provider. | `execute` with `Aer` backend | `result = simulator.run(qc).result()`<br>`counts = result.get_counts(qc)`
