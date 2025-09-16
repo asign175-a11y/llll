@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | `{"data":"from qiskit import QuantumCircuit, Aer, execute` | e012 | DEPRECATION - Replace `Aer` import with `BasicProvider` | qiskit.providers.basicaer | ```python<br>from qiskit.providers.basic_provider import BasicProvider<br>provider = BasicProvider()<br>``` |
+| 19 | `simulator = Aer.get_backend('statevector_simulator')` | b0b8 | MIGRATION - Replace BasicAer backend with BasicProvider and Statevector | BasicAer.get_backend | ```python<br>provider = BasicProvider()<br>backend = provider.get_backend('statevector_simulator')<br>``` |
+| 21 | `statevector = result.get_statevector()` | b0b8 | MIGRATION - Use Statevector constructor | result.get_statevector | ```python<br>from qiskit.quantum_info import Statevector<br>statevector = Statevector(qc)<br>``` |
