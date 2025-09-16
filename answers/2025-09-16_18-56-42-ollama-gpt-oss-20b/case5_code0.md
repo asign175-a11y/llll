@@ -1,0 +1,9 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.extensions import HGate, XGate, Initialize` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | qiskit.extensions | `from qiskit.circuit.library import HGate, XGate, Initialize` |
+| 3 | `from qiskit.extensions import Barrier` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | qiskit.extensions | `from qiskit.circuit.library import Barrier` |
+| 4 | `from qiskit.extensions import UnitaryGate` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | qiskit.extensions | `from qiskit.circuit.library import UnitaryGate` |
+| 10 | `qc.append(HGate(), [qr[0]])` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | HGate | `qc.h(qr[0])` |
+| 11 | `qc.append(XGate(), [qr[1]])` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | XGate | `qc.x(qr[1])` |
+| 18 | `init_gate = Initialize(psi)` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | Initialize | `qc.initialize(psi, qr[0])` |
+| 21 | `qc.append(Barrier(3), [qr[0], qr[1], qr[2]])` | 4747 | DEPRECATION - The qiskit.extensions module is deprecated; components moved to qiskit.circuit.library. | Barrier | `qc.barrier([qr[0], qr[1], qr[2]])` |
