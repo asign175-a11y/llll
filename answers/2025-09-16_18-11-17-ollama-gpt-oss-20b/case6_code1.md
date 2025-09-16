@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit.providers.fake_provider import FakeOpenPulse3Q` | 7549 | Running pulse jobs on backends from qiskit.providers.fake_provider is deprecated. | `qiskit.providers.fake_provider.FakeOpenPulse3Q` | `from qiskit_ibm_runtime.fake_provider import FakeOpenPulse3Q` |
+| 5 | `backend = FakeOpenPulse3Q()` | 7549 | Running pulse jobs on backends from qiskit.providers.fake_provider is deprecated. | `qiskit.providers.fake_provider.FakeOpenPulse3Q` | `backend = FakeOpenPulse3Q()` (with updated import) |
+| 5 | `backend = FakeOpenPulse3Q()` | b0ee | The qiskit.providers.fake_provider module has been migrated to the qiskit-ibm-runtime Python package. | `qiskit.providers.fake_provider` | `from qiskit_ibm_runtime.fake_provider import FakeOpenPulse3Q`
