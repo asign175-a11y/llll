@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | `from qiskit import QuantumCircuit, Aer, execute` | 1b49 | Importing from qiskit.providers.aer is deprecated; use qiskit_aer instead. | Aer | `from qiskit_aer import Aer` |
+| 19 | `simulator = Aer.get_backend('statevector_simulator')` | e012 | Migration path for statevector simulator: replace BasicAer.get_backend('statevector_simulator') with Statevector(qc). | statevector_simulator backend | `from qiskit.quantum_info import Statevector\nstatevector = Statevector(qc)` |
