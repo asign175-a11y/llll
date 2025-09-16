@@ -1,0 +1,3 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit import Aer              # type: ignore` | b185 | The qiskit.providers.basicaer module and all of its classes are deprecated from Qiskit 0.46 onwards. Their use should be replaced with the qiskit.quantum_info module and the new qiskit.providers.basic_provider module. | qiskit.providers.basicaer.Aer | `from qiskit.providers.basic_provider import BasicProvider`
