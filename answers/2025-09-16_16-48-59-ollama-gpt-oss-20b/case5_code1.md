@@ -1,0 +1,3 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 21 | `qc.append(ext.Barrier(3), [qr[0], qr[1], qr[2]])` | a747 | The qiskit.extensions module is now deprecated. | `qiskit.extensions` | Import Barrier from qiskit.circuit: `from qiskit.circuit import Barrier` and replace the line with `qc.append(Barrier(3), [qr[0], qr[1], qr[2]])`. |
