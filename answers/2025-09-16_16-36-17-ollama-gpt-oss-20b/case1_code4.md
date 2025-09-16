@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 10 | `from qiskit import Aer` | b185 | DEPRECATION - qiskit.providers.basicaer module replaced by qiskit.providers.basic_provider | `qiskit.providers.basicaer` | `from qiskit.providers.basic_provider import BasicProvider` |
+| 11 | `backend = Aer.get_backend('aer_simulator')` | b185 | DEPRECATION - qiskit.providers.basicaer module replaced by qiskit.providers.basic_provider | `qiskit.providers.basicaer` | `backend = BasicProvider().get_backend('basic_simulator')` |
