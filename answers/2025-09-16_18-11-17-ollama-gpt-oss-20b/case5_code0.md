@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit.extensions import HGate, XGate, Initialize` | 0747 | DEPRECATION - The qiskit.extensions module is deprecated. Most objects moved to qiskit.circuit.library. | HGate, XGate, Initialize | `from qiskit.circuit.library import HGate, XGate, Initialize` |
+| 4 | `from qiskit.extensions import Barrier` | 0747 | DEPRECATION - The qiskit.extensions module is deprecated. Most objects moved to qiskit.circuit.library. | Barrier | `from qiskit.circuit.library import Barrier` |
+| 5 | `from qiskit.extensions import UnitaryGate` | 0747 | DEPRECATION - The qiskit.extensions module is deprecated. Most objects moved to qiskit.circuit.library. | UnitaryGate | `from qiskit.circuit.library import UnitaryGate` |
