@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 15 | `simulator = getBackend.get_backend('statevector_simulator')` | b185 | The qiskit.providers.basicaer module and its classes are deprecated from Qiskit 0.46 onwards; use qiskit.providers.basic_provider instead. | `qiskit.providers.basicaer` | `from qiskit.providers.basic_provider import BasicProvider; from qiskit.quantum_info import Statevector\nsimulator = BasicProvider().get_backend('statevector_simulator')\nstatevector = Statevector(simulator)` |
+| 19 | `backend = getBackend.get_backend('qasm_simulator')` | b185 | The qiskit.providers.basicaer module and its classes are deprecated from Qiskit 0.46 onwards; use qiskit.providers.basic_provider instead. | `qiskit.providers.basicaer` | `from qiskit.providers.basic_provider import BasicProvider\nbackend = BasicProvider().get_backend('qasm_simulator')` |
