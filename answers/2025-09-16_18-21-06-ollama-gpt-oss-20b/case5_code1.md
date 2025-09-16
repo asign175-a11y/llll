@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 4 | `from qiskit import extensions as ext` | 0747 | The qiskit.extensions module is now deprecated. It had been pending deprecation since the Qiskit 0.45 release. Most objects have been moved to qiskit.circuit.library, including: DiagonalGate, HamiltonianGateGate, Initialize, Isometry, MCGupDiag, UCGate, UCPauliRotGate, UCRXGate, UCRYGate, UCRZGate, UnitaryGate. | qiskit.extensions |  |
+| 21 | `qc.append(ext.Barrier(3), [qr[0], qr[1], qr[2]])` | 0747 | The qiskit.extensions module is now deprecated. It had been pending deprecation since the Qiskit 0.45 release. Most objects have been moved to qiskit.circuit.library, including: DiagonalGate, HamiltonianGateGate, Initialize, Isometry, MCGupDiag, UCGate, UCPauliRotGate, UCRXGate, UCRYGate, UCRZGate, UnitaryGate. | ext.Barrier |  |
