@@ -1,0 +1,3 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.test.mock import FakeVigo` | b0ee | DEPRECATED - Fake backend import from `qiskit.test.mock` is deprecated; migrate to `GenericBackendV2` | `qiskit.test.mock.FakeVigo` | ```python\nfrom qiskit.providers.fake_provider import GenericBackendV2\nbackend = GenericBackendV2(num_qubits=2)\n``` |
