@@ -1,0 +1,3 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit.providers.fake_provider import FakeOpenPulse3Q` | db0ee | DEPRECATION - Running pulse jobs on backends from qiskit.providers.fake_provider is deprecated. | `qiskit.providers.fake_provider.FakeOpenPulse3Q` | `from qiskit_ibm_runtime.fake_provider import FakeOpenPulse3Q` |
