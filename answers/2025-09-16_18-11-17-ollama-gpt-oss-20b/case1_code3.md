@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit import QuantumCircuit, execute, Aer, qasm` | 4185 | DEPRECATION - qiskit.providers.basicaer module and its classes are deprecated from Qiskit 0.46 onwards; use qiskit.providers.basic_provider instead. | `qiskit.providers.basicaer.Aer` | `from qiskit.providers.basic_provider import BasicProvider` |
+| 11 | `backend = Aer.get_backend('aer_simulator')` | 4185 | DEPRECATION - qiskit.providers.basicaer module and its classes are deprecated from Qiskit 0.46 onwards; use qiskit.providers.basic_provider instead. | `qiskit.providers.basicaer.QasmSimulatorPy` | `backend = BasicProvider().get_backend('basic_simulator')`
