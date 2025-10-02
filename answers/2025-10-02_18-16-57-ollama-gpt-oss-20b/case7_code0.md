@@ -1,0 +1,6 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.test.mock import FakeVigo` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. | `qiskit.test.mock.FakeVigo` | `from qiskit_ibm_runtime.fake_provider import FakeVigo` |
+| 3 | `from qiskit.test.reference_circuits import ReferenceCircuits` | 4747 | The `qiskit.extensions` module is now deprecated. Most objects have been moved to `qiskit.circuit.library`. | `qiskit.test.reference_circuits.ReferenceCircuits` | `from qiskit.circuit.library import ...` |
+| 5 | `qc = ReferenceCircuits.bell()` | 4747 | The `qiskit.extensions` module is now deprecated. Most objects have been moved to `qiskit.circuit.library`. | `ReferenceCircuits.bell()` | `QuantumCircuit.bell()` or `NLocal(num_qubits).bell()` |
+| 6 | `backend = FakeVigo()` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. | `FakeVigo()` | `FakeVigo()` (from `qiskit_ibm_runtime.fake_provider`) |
