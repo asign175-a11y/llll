@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 15 | `simulator = getBackend.get_backend('statevector_simulator')` | e012 | Statevector simulator and result acquisition migration from BasicAer. | `BasicAer.get_backend("statevector_simulator")`, `backend.run().result().get_statevector()` | `qc.remove_final_measurements() # no measurements allowed\nfrom qiskit.quantum_info import Statevector\nstatevector = Statevector(qc)` |
+| 19 | `backend = getBackend.get_backend('qasm_simulator')` | b0b8 | Qasm simulator backend migration from BasicAer. | `BasicAer.get_backend("qasm_simulator")` | `from qiskit.providers.basic_provider import BasicProvider\nbackend = BasicProvider().get_backend("basic_simulator")` |
