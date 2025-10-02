@@ -1,0 +1,8 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 1 | `from qiskit import execute` | b5b0b8 | REPLACEMENT - The global `execute` function is replaced by the `run` method of the backend object. | `qiskit.execute` | (Remove import) |
+| 2 | `from qiskit.test.mock import FakeVigo` | 2d40a747 | DEPRECATION - Fake backends like `FakeVigo` are deprecated and superseded by `GenericBackendV2`. | `qiskit.test.mock.FakeVigo` | `from qiskit.providers.fake_provider import GenericBackendV2` |
+| 8 | `backend = FakeVigo()` | 2d40a747 | DEPRECATION - Fake backends like `FakeVigo` are deprecated and superseded by `GenericBackendV2`. | `FakeVigo()` | `backend = GenericBackendV2(num_qubits=5)` |
+| 9 | `job = execute(qc, backend, shots=1024)` | b5b0b8 | REPLACEMENT - The global `execute` function is replaced by the `run` method of the backend object. | `execute(qc, backend, shots=1024)` | `job = backend.run(qc, shots=1024)` |
+| 21 | `backend = FakeVigo()` | 2d40a747 | DEPRECATION - Fake backends like `FakeVigo` are deprecated and superseded by `GenericBackendV2`. | `FakeVigo()` | `backend = GenericBackendV2(num_qubits=5)` |
+| 22 | `job = execute(qc, backend, shots=1024)` | b5b0b8 | REPLACEMENT - The global `execute` function is replaced by the `run` method of the backend object. | `execute(qc, backend, shots=1024)` | `job = backend.run(qc, shots=1024)` |
