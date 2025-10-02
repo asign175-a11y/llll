@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.opflow import PauliSumOp` | 29ef | Implicit conversion from a dense `BaseOperator` to a `SparsePauliOp` in Estimator observable arguments is deprecated as of Qiskit 0.46 and will be removed in Qiskit 1.0. You should explicitly convert to a `SparsePauliOp` using `SparsePauliOp.from_operator()` instead. | `qiskit.opflow.PauliSumOp` | `from qiskit.quantum_info import SparsePauliOp` |
+| 14 | `H1 = PauliSumOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])` | 8c20 | Using a `PauliList` as an observable that is implicitly converted to a `SparsePauliOp` with coefficients 1 when calling `Estimator.run()` is deprecated. Instead you should explicitly convert the argument using `SparsePauliOp(pauli_list)` first. | `PauliSumOp.from_list` | `H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])` |
