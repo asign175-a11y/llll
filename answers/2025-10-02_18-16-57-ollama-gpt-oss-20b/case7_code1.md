@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.test.mock import FakeVigo` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. `FakeVigo` is superseded by `GenericBackendV2`. | `qiskit.test.mock.FakeVigo` | `# run "pip install qiskit-ibm-runtime"\nfrom qiskit_ibm_runtime.fake_provider import GenericBackendV2\nbackend = GenericBackendV2(num_qubits=5)` |
+| 9 | `backend = FakeVigo()` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. `FakeVigo` is superseded by `GenericBackendV2`. | `FakeVigo()` | `from qiskit_ibm_runtime.fake_provider import GenericBackendV2\nbackend = GenericBackendV2(num_qubits=5)` |
+| 19 | `backend = FakeVigo()` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. `FakeVigo` is superseded by `GenericBackendV2`. | `FakeVigo()` | `from qiskit_ibm_runtime.fake_provider import GenericBackendV2\nbackend = GenericBackendV2(num_qubits=5)` |
