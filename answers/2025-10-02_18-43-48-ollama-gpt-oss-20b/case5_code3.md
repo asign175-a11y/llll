@@ -1,0 +1,6 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.extensions import UnitaryGate` | a747 | The qiskit.extensions module is now deprecated. It had been pending deprecation since the Qiskit 0.45 release. Most objects have been moved to qiskit.circuit.library, including: UnitaryGate. | `qiskit.extensions.UnitaryGate` | `from qiskit.circuit.library import UnitaryGate` |
+| 3 | `from qiskit.extensions.exceptions import ExtensionError` | a747 | The qiskit.extensions module is now deprecated. It had been pending deprecation since the Qiskit 0.45 release. Most objects have been moved to qiskit.circuit.library. | `qiskit.extensions.exceptions.ExtensionError` | `from qiskit.circuit.exceptions import CircuitError` |
+| 10 | `custom_gate = UnitaryGate(matrix)` | a747 | The qiskit.extensions module is now deprecated. It had been pending deprecation since the Qiskit 0.45 release. Most objects have been moved to qiskit.circuit.library, including: UnitaryGate. | `UnitaryGate` | `custom_gate = UnitaryGate(matrix)` |
+| 12 | `except ExtensionError as e:` | a747 | The qiskit.extensions module is now deprecated. It had been pending deprecation since the Qiskit 0.45 release. Most objects have been moved to qiskit.circuit.library. | `ExtensionError` | `except CircuitError as e:` |
