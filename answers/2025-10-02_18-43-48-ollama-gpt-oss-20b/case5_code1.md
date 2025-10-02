@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 4 | `from qiskit import extensions as ext` | 0a747 | The `qiskit.extensions` module is deprecated. Objects have been moved to `qiskit.circuit.library` or are available directly from `qiskit.circuit`. | `qiskit.extensions` | Remove `from qiskit import extensions as ext` and import specific components (e.g., `Barrier` from `qiskit.circuit`, `Initialize` from `qiskit.circuit.library`) as needed. |
+| 19 | `qc.prepare_state(psi, [qr[0]])` | 0a747 | The `QuantumCircuit.prepare_state` method is deprecated. Use `qc.initialize()` method or `Initialize` gate from `qiskit.circuit.library`. | `QuantumCircuit.prepare_state` | `qc.initialize(psi, [qr[0]])` |
+| 21 | `qc.append(ext.Barrier(3), [qr[0], qr[1], qr[2]])` | 0a747 | The `qiskit.extensions` module is deprecated. `Barrier` is available directly as a circuit method. | `ext.Barrier` | `qc.barrier(qr[0], qr[1], qr[2])` |
