@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit import Aer              # type: ignore` | 1b49 | Importing from `qiskit.providers.aer` is deprecated and will stop working in Qiskit 1.0. You should instead import from `qiskit_aer`, which is a drop-in replacement. | `qiskit.Aer` | `from qiskit_aer import Aer` |
+| 4 | `from qiskit import qasm             # type: ignore` | b185 | The `qiskit.providers.basicaer` module and all of its classes are deprecated from Qiskit 0.46 onwards. Their use should be replaced with the `qiskit.quantum_info` module and the new `qiskit.providers.basic_provider` module. | `qiskit.qasm` | `from qiskit.providers.basic_provider import BasicProvider` |
