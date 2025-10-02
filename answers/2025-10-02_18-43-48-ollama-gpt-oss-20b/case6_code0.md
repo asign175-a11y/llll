@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit.providers import fake_provider` | b0ee | The qiskit.providers.fake_provider module has been migrated to the qiskit-ibm-runtime Python package. | `qiskit.providers.fake_provider` | `from qiskit_ibm_runtime.fake_provider import FakeProvider` |
+| 5 | `backend = fake_provider.FakeOpenPulse3Q()` | b0ee | Running pulse jobs on backends from qiskit.providers.fake_provider is deprecated, and all support will be removed in Qiskit 1.0. | `fake_provider.FakeOpenPulse3Q()` | `from qiskit_ibm_runtime.fake_provider import FakeOpenPulse3Q` |
+| 9 | `pulse_obj = Gaussian(duration=128, amp=0.5, sigma=16)` | 187d | Complex amplitude support is deprecated in the symbolic pulse library - use float, amp and angle instead. | `Gaussian` | `pulse.Gaussian(duration=128, amp=0.5, sigma=16).get_waveform()` |
