@@ -1,0 +1,6 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | `from qiskit.providers.fake_provider import FakeOpenPulse3Q` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package and is deprecated as of Qiskit 0.46. | `qiskit.providers.fake_provider.FakeOpenPulse3Q` | `from qiskit_ibm_runtime.fake_provider import FakeOpenPulse3Q` |
+| 5 | `backend = FakeOpenPulse3Q()` | b0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package and is deprecated as of Qiskit 0.46. | `FakeOpenPulse3Q()` | `backend = FakeOpenPulse3Q()` |
+| 9 | `pulse.u2(0, math.pi, 0)` | 26c5 | Direct use of `u2()` within `pulse.build()` context is deprecated. | `pulse.u2()` | `Consider building a QuantumCircuit, transpiling, and scheduling it, then using pulse.call() with the generated schedule.` |
+| 10 | `pulse.cx(0, 1)` | 26c5 | Direct use of `cx()` within `pulse.build()` context is deprecated. | `pulse.cx()` | `Consider building a QuantumCircuit, transpiling, and scheduling it, then using pulse.call() with the generated schedule.` |
