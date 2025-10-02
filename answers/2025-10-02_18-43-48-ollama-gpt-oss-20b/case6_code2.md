@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.providers.fake_provider import *` | db0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. | `qiskit.providers.fake_provider` | `from qiskit_ibm_runtime.fake_provider import *` |
+| 4 | `backend = FakeOpenPulse2Q()` | db0ee | Fake backends designed for special testing purposes have been superseded by the new GenericBackendV2 class. | `FakeOpenPulse2Q` | `from qiskit.providers.fake_provider import GenericBackendV2`\n`backend = GenericBackendV2(num_qubits=2)` |
+| 7 | `with pulse.build() as pulse_prog:` | 51b49 | Running pulse jobs on backends from `qiskit.providers.fake_provider` is deprecated, and all support will be removed in Qiskit 1.0. For low-level Hamiltonian-simulation workloads, consider using a specialised library such as Qiskit Dynamics. | `pulse` jobs with `FakeOpenPulse2Q` backend | Consider using a specialised library such as Qiskit Dynamics. |
