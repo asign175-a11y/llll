@@ -1,0 +1,7 @@
+```markdown
+| Line | Code                                       | Scenario ID | Scenario                                                                                                                                                                        | Artifact                | Refactoring                        |
+| :--: | :----------------------------------------- | :---------: | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | :--------------------- | :--------------------------------- |
+| 3    | from qiskit import QuantumCircuit          | a7ac       | If import qiskit raises an ImportError for you, your environment is in an invalid state, and versions of Qiskit 0.45/0.46 and 1.0 are both reachable, which will result in subtly broken code. | qiskit.QuantumCircuit  | Create a new virtual environment.  |
+| 4    | from qiskit import Aer                    | 6196       | Importing from qiskit.providers.aer is deprecated and will stop working in Qiskit 1.0. You should instead import from qiskit_aer, which is a drop-in replacement.              | qiskit.providers.aer   | from qiskit_aer import Aer       |
+| 5    | from qiskit import qasm                   | b185       | The qiskit.providers.basicaer module and all of its classes are deprecated from Qiskit 0.46 onwards. Their use should be replaced with the qiskit.quantum_info module.           | qiskit.qasm            | Replace with appropriate modules.  |
+```
