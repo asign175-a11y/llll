@@ -1,0 +1,8 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| :---- | :---- | :---------- | :---------------------------------------------------------------- | :-------------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| 3 | `from qiskit.tools.visualization import plot_histogram` | `M-001` | Deprecation -> `qiskit.tools.visualization` module has been moved. | `qiskit.tools.visualization` | `from qiskit.visualization import plot_histogram` |
+| 4 | `from qiskit.tools.monitor import job_monitor` | `M-001` | Deprecation -> `qiskit.tools.monitor` module has been moved. | `qiskit.tools.monitor` | `from qiskit.providers.job import job_monitor` |
+| 15 | `simulator = getBackend.get_backend('statevector_simulator')` | `M-002` | Deprecation -> `qiskit.Aer.get_backend()` is deprecated. Use direct simulator instantiation. | `get_backend` | `from qiskit_aer import AerSimulator` <br> `simulator = AerSimulator(method='statevector')` |
+| 16 | `result = execute(qc, simulator).result()` | `M-003` | Deprecation -> `qiskit.execute()` function is deprecated. Use the `backend.run()` method. | `execute` | `result = simulator.run(qc).result()` |
+| 19 | `backend = getBackend.get_backend('qasm_simulator')` | `M-002` | Deprecation -> `qiskit.Aer.get_backend()` is deprecated. Use direct simulator instantiation. | `get_backend` | `from qiskit_aer import AerSimulator` <br> `backend = AerSimulator()` |
+| 20 | `job = execute(qc, backend, shots=1000)` | `M-003` | Deprecation -> `qiskit.execute()` function is deprecated. Use the `backend.run()` method. | `execute` | `job = backend.run(qc, shots=1000)` |
