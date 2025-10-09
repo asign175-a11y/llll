@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | from qiskit.tools.events import TextProgressBar | e235 | The qiskit.tools.events module and the progressbar() utility it exposed has been deprecated and will be removed in the Qiskit 1.0.0 release. This module’s functionality was not widely used and better covered by dedicated packages such as tqdm. | qiskit.tools.events.TextProgressBar | Dedicated packages such as tqdm |
+| 11 | TextProgressBar().update(job) | e235 | The qiskit.tools.events module and the progressbar() utility it exposed has been deprecated and will be removed in the Qiskit 1.0.0 release. This module’s functionality was not widely used and better covered by dedicated packages such as tqdm. | qiskit.tools.events.TextProgressBar | Dedicated packages such as tqdm |
