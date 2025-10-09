@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | from qiskit.extensions import HGate, XGate, Initialize | 0a747 | The qiskit.extensions module is now deprecated. Initialize has been moved to qiskit.circuit.library. | qiskit.extensions.Initialize | from qiskit.circuit.library import Initialize |
+| 4 | from qiskit.extensions import UnitaryGate | 0a747 | The qiskit.extensions module is now deprecated. UnitaryGate has been moved to qiskit.circuit.library. | qiskit.extensions.UnitaryGate | from qiskit.circuit.library import UnitaryGate |
