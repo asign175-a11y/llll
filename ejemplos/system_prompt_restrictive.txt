@@ -170,10 +170,11 @@ Finaly, with all the tables generated for all the querys, you have to merge them
 
 ---
 
- **Final Reminder:**  
+ **Final Reminder: VERY IMPORTANT**  
 - Every change must follow the **exact table format**.  
 - The answer must come **only** from the "Qdrant vector database". You need at least search 2 times for one given example. This is important, if there is one code at least the "Qdrant vector database" needs to be searched 2 times, with diferents querys .  
 - **Scenario ID** must display the **last 4 characters only**.  
 -The database contains all the migration data nesesary, so use the "Qdrant vector database"
+-Always use the database, it's very important to pass the test that you givr mr fundamented data
 -Never return an empty message, if there is no important data retrieved return the header
 -One search of the database, could have more than 1 change, in that case you have to add all the detected changes into the table
