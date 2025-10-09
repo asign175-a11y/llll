@@ -1,0 +1,5 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.providers.fake_provider import *` | `00ee` | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package and is deprecated as of Qiskit 0.46. | `qiskit.providers.fake_provider` | `from qiskit_ibm_runtime.fake_provider import *` |
+| 4 | `backend = FakeOpenPulse2Q()` | `a747` | Fake backends designed for special testing purposes, like `FakeOpenPulse2Q`, are deprecated as of Qiskit 0.46 and superseded by the new `GenericBackendV2` class. | `FakeOpenPulse2Q` | `backend = GenericBackendV2(num_qubits=2)` |
+| 9 | `    pulse.play(pulse.Constant(100, 0.5), d0)` | `187d` | Direct use of `pulse.Constant` within `pulse.play` is deprecated. Instead, use the corresponding `SymbolicPulse` with `get_waveform()`. | `pulse.Constant` | `    pulse.play(pulse.Constant(100, 0.5).get_waveform(), d0)` |
