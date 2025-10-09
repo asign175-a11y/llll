@@ -1,0 +1,3 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | `from qiskit.extensions import UnitaryGate` | `a747` | The `qiskit.extensions` module is now deprecated. Most objects have been moved to `qiskit.circuit.library`, including `UnitaryGate`. | `qiskit.extensions.UnitaryGate` | `from qiskit.circuit.library import UnitaryGate` |
