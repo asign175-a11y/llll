@@ -1,0 +1,6 @@
+```markdown
+| Line | Code                                          | Scenario ID | Scenario                                                                                                    | Artifact               | Refactoring                                                                                       |
+|------|-----------------------------------------------|-------------|------------------------------------------------------------------------------------------------------------|------------------------|--------------------------------------------------------------------------------------------------|
+| 1    | from qiskit import qasm                      | 8747        | The `qiskit` module import is now deprecated; it had been pending deprecation since the Qiskit 0.45 release. | qiskit.qasm           | Use `from qiskit import qasm2`.                                                                  |
+| 2    | from qiskit import Aer                       | 8b49        | Importing from `qiskit.providers.aer` is deprecated and will stop working in Qiskit 1.0.                  | qiskit.providers.aer  | Instead import from `qiskit_aer`, which is a drop-in replacement.                               |
+```
