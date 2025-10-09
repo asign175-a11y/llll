@@ -1,0 +1,8 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+|---|---|---|---|---|---|
+| 2 | `from qiskit.opflow import PauliSumOp` | * | Deprecation -> `qiskit.opflow` module is deprecated; `PauliSumOp` is replaced by `SparsePauliOp`. | `qiskit.opflow.PauliSumOp` | `from qiskit.quantum_info import SparsePauliOp` |
+| 3 | `from qiskit.primitives import BackendEstimator` | * | Deprecation -> `qiskit.primitives.BackendEstimator` is removed. Use `qiskit.primitives.Estimator`. | `qiskit.primitives.BackendEstimator` | `from qiskit.primitives import Estimator` |
+| 11 | `H1 = PauliSumOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])` | * | Deprecation -> `PauliSumOp` is replaced by `SparsePauliOp`. | `PauliSumOp.from_list` | `H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])` |
+| 15 | `estimator = BackendEstimator(` | * | Deprecation -> `BackendEstimator` constructor is removed; `Estimator` constructor takes no `backend` or `options` parameters in this form. | `BackendEstimator` constructor | `estimator = Estimator()` |
+| 16 | `    backend=backend,` | * | Change -> The `backend` parameter is removed from the `qiskit.primitives.Estimator` constructor in 0.46.0. Backend configuration is handled differently (e.g., via runtime service or specialized primitives). | `backend` parameter in `BackendEstimator` constructor | |
+| 17 | `    options={"shots": 1024}  # Configurar shots aquí` | * | Change -> The `options` parameter is removed from the `qiskit.primitives.Estimator` constructor in 0.46.0. Options are now set via `set_options` method. | `options` parameter in `BackendEstimator` constructor | `estimator.set_options(shots=1024)` |
