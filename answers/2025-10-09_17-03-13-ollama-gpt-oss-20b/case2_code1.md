@@ -1,0 +1,6 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+|---|---|---|---|---|---|
+| 2 | `from qiskit.opflow import PauliSumOp` | `QISKIT_0_46_0_DEPRECATION_OPFLOW_001` | Deprecation -> The `qiskit.opflow` module is deprecated. | `qiskit.opflow.PauliSumOp` | `from qiskit.quantum_info import SparsePauliOp` |
+| 3 | `from qiskit.primitives import BackendEstimator` | `QISKIT_0_46_0_DEPRECATION_PRIMITIVES_001` | Deprecation -> `qiskit.primitives.BackendEstimator` is deprecated. Use `qiskit.primitives.Estimator` instead. | `qiskit.primitives.BackendEstimator` | `from qiskit.primitives import Estimator` |
+| 11 | `H1 = PauliSumOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])` | `QISKIT_0_46_0_DEPRECATION_OPFLOW_001` | Deprecation -> `PauliSumOp.from_list` is deprecated; use `SparsePauliOp.from_list`. | `PauliSumOp.from_list` | `H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)])` |
+| 15 | `estimator = BackendEstimator(` | `QISKIT_0_46_0_DEPRECATION_PRIMITIVES_001` | Deprecation -> `BackendEstimator` class is deprecated. Use `Estimator` instead. | `BackendEstimator` | `estimator = Estimator(` |
