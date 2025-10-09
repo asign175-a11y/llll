@@ -1,0 +1,8 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | from qiskit.tools.visualization import plot_histogram | 2354 | `qiskit.tools.visualization` module is deprecated. Update imports to `qiskit.visualization`. | `qiskit.tools.visualization` | from qiskit.visualization import plot_histogram |
+| 4 | from qiskit.tools.monitor import job_monitor | 53c7 | `qiskit.tools.monitor` module is deprecated. Its functionality is tied to the legacy `qiskit-ibmq-provider` package, which is no longer supported. | `qiskit.tools.monitor.job_monitor` | |
+| 15 | simulator = getBackend.get_backend('statevector_simulator') | b0b8 | Statevector simulation in `qiskit.providers.basicaer` is deprecated. Use `qiskit.quantum_info.Statevector` to directly construct the statevector from the circuit. | `StatevectorSimulatorPy` | from qiskit.quantum_info import Statevector<br>statevector = Statevector(qc) |
+| 19 | backend = getBackend.get_backend('qasm_simulator') | b0b8 | Qasm simulation in `qiskit.providers.basicaer` is deprecated. Use `qiskit.providers.basic_provider.BasicSimulator`. | `QasmSimulatorPy` | from qiskit.providers.basic_provider import BasicSimulator<br>backend = BasicSimulator() |
+| 22 | job_monitor(job) | 53c7 | `qiskit.tools.monitor` module is deprecated. Its functionality is tied to the legacy `qiskit-ibmq-provider` package, which is no longer supported. | `qiskit.tools.monitor.job_monitor` | |
+| 24 | plot_histogram(counts) | 1b33 | Passing a dictionary to `plot_histogram()` is deprecated. Use `plot_distribution()` instead. | `plot_histogram()` with dictionary input. | plot_distribution(counts) |
