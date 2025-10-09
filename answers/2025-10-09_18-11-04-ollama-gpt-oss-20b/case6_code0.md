@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 3 | from qiskit.providers import fake_provider | 0db0ee | The `qiskit.providers.fake_provider` module has been migrated to the `qiskit-ibm-runtime` Python package. For this reason, the following elements in the `qiskit.providers.fake_provider` have been deprecated as of Qiskit 0.46 and will be removed in Qiskit 1.0. | qiskit.providers.fake_provider | from qiskit_ibm_runtime import fake_provider |
+| 5 | backend = fake_provider.FakeOpenPulse3Q() | 061b49 | Running pulse jobs on backends from qiskit.providers.fake_provider is deprecated, and all support will be removed in Qiskit 1.0. This is due to Qiskit Aer removing its simulation functionality for such jobs. For low-level Hamiltonian-simulation workloads, consider using a specialised library such as Qiskit Dynamics. | fake_provider.FakeOpenPulse3Q | |
