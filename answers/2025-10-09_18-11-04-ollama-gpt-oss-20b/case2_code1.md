@@ -1,0 +1,4 @@
+| Line | Code | Scenario ID | Scenario | Artifact | Refactoring |
+| :--: | :--- | :---------: | :------- | :------- | :---------- |
+| 2 | from qiskit.opflow import PauliSumOp | 8c20 | DEPRECATION - The `qiskit.opflow` module and `PauliSumOp` are deprecated. Use `qiskit.quantum_info.SparsePauliOp` instead. | qiskit.opflow.PauliSumOp | from qiskit.quantum_info import SparsePauliOp |
+| 10 | H1 = PauliSumOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)]) | 8c20 | DEPRECATION - Using `PauliSumOp` is deprecated. Explicitly convert to `SparsePauliOp`. | qiskit.opflow.PauliSumOp | H1 = SparsePauliOp.from_list([("II", 1), ("IZ", 2), ("XI", 3)]) |
