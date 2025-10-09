@@ -1,0 +1,3 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 3 | `from qiskit.test.reference_circuits import ReferenceCircuits` | * | Deprecation -> The `qiskit.test.reference_circuits` module is deprecated and its contents have moved. | `qiskit.test.reference_circuits.ReferenceCircuits` | `from qiskit.circuit.library import ReferenceCircuits` |
