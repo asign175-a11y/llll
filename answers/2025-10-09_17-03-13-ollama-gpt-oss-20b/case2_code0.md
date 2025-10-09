@@ -1,0 +1,3 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 10 | `job = estimator.run([psi1], [H1], [theta1])` | * | Deprecation -> The `run()` method of `Estimator` has changed its signature. Positional arguments for `circuits`, `observables`, and `parameter_values` are deprecated. | `Estimator.run` | `job = estimator.run(circuits=[psi1], observables=[H1], parameter_values=[theta1])` |
