@@ -1,0 +1,7 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 2 | from qiskit.extensions import HGate, XGate, Initialize | `qiskit.extensions.gates` | Deprecation -> The `qiskit.extensions` module has been deprecated and its components moved to `qiskit.circuit.library`. | `HGate` | from qiskit.circuit.library import HGate, XGate, Initialize |
+| 2 | from qiskit.extensions import HGate, XGate, Initialize | `qiskit.extensions.gates` | Deprecation -> The `qiskit.extensions` module has been deprecated and its components moved to `qiskit.circuit.library`. | `XGate` | from qiskit.circuit.library import HGate, XGate, Initialize |
+| 2 | from qiskit.extensions import HGate, XGate, Initialize | `qiskit.extensions.initialize` | Deprecation -> The `qiskit.extensions` module has been deprecated and its components moved to `qiskit.circuit.library`. | `Initialize` | from qiskit.circuit.library import HGate, XGate, Initialize |
+| 3 | from qiskit.extensions import Barrier | `qiskit.extensions.standard.barrier` | Deprecation -> The `qiskit.extensions` module has been deprecated and its components moved to `qiskit.circuit.library`. | `Barrier` | from qiskit.circuit.library import Barrier |
+| 4 | from qiskit.extensions import UnitaryGate | `qiskit.extensions.standard.unitary` | Deprecation -> The `qiskit.extensions` module has been deprecated and its components moved to `qiskit.circuit.library`. | `UnitaryGate` | from qiskit.circuit.library import UnitaryGate |
