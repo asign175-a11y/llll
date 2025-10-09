@@ -1,0 +1,5 @@
+| Line | Code | Scenario Id | Scenario | Artifact | Refactoring |
+| ----- | ----- | ----- | ----- | ----- | ----- |
+| 2 | `from qiskit.test.mock import FakeVigo` | QT001 | Deprecation -> The `qiskit.test.mock` module has been moved to `qiskit.providers.fake_provider`. | `qiskit.test.mock` | `from qiskit.providers.fake_provider import FakeVigo` |
+| 3 | `from qiskit.test.reference_circuits import ReferenceCircuits` | QT002 | Deprecation -> The `qiskit.test.reference_circuits` module has been moved. Reference circuits are now available directly in `qiskit.circuit.library`. | `qiskit.test.reference_circuits` | `from qiskit.circuit.library import BellState` |
+| 5 | `qc = ReferenceCircuits.bell()` | QT003 | Deprecation -> `ReferenceCircuits.bell()` is deprecated. Use `qiskit.circuit.library.BellState` instead. | `ReferenceCircuits.bell()` | `qc = BellState()` |
